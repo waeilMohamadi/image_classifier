@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+mlruns/
+artifacts/
+mlflow.db
+*.keras
+*.tflite
+.venv/
+.DS_Store
+fruits/

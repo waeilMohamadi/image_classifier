@@ -1,0 +1,32 @@
+"""
+Fruit CNN (Keras) + MLflow Model Registry (REGISTER ONLY, NO TFLITE)
+Windows / VS Code friendly.
+
+✅ What this script does:
+1) Loads datasets from:
+   fruits/train, fruits/validation, fruits/test
+2) Builds a CNN
+3) Trains + evaluates
+4) Logs params/metrics/artifacts to MLflow
+5) Registers the model in MLflow Model Registry as: Fruit_CNN
+
+IMPORTANT:
+- Start MLflow SERVER (registry needs a DB backend), then run this script.
+
+Start MLflow server (PowerShell):
+  mlflow server `
+    --backend-store-uri sqlite:///mlflow.db `
+    --default-artifact-root ./mlruns `
+    --host 127.0.0.1 `
+    --port 5000
+
+Or CMD:
+  mlflow server ^
+    --backend-store-uri sqlite:///mlflow.db ^
+    --default-artifact-root ./mlruns ^
+    --host 127.0.0.1 ^
+    --port 5000
+
+Then run:
+  python train_register.py
+"""
